@@ -4,7 +4,7 @@ public class MyWallet{
 
 	private String name;
 	private String socialsecNum;
-	protected double balance;
+	protected double balance;//Changed visibility modifier from private to protected error 1#
 	
 	public MyWallet(String name, String socialsecNum) {
 		this.name = name;

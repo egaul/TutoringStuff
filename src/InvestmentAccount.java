@@ -6,12 +6,12 @@ public class InvestmentAccount extends CheckingAccount {
 	
 	public InvestmentAccount(String name, String socialsecNum, String checkingAccountNumber, String InvestmentAccountNumber) {
 		//super(name, socialsecNum);
-		super(name, socialsecNum, checkingAccountNumber);//Added third parameter
-		this.InvestmentAccountNumber = InvestmentAccountNumber;
+		super(name, socialsecNum, checkingAccountNumber);//Added third parameter error 1#
+		this.InvestmentAccountNumber = InvestmentAccountNumber;//Storing class variable
 	}
 	
 	public void transferMoney(double amount) {
-		if(super.successfulTransfer(amount)) {//removed not operator
+		if(super.successfulTransfer(amount)) {//removed not operator error 2#
 			System.out.println("Successful transfer!");
 			totalInvestments +=amount;
 		}
@@ -20,12 +20,8 @@ public class InvestmentAccount extends CheckingAccount {
 		}
 	}
 
-	public double getTotalInvestments() {
-		return totalInvestments;
-	}
-
 	public String toString() {
 		//return "\n\nInvestment Account#: " + InvestmentAccountNumber +"\nInvestments: $"+totalInvestments+"\n";
-		return super.toString() +"\n\nInvestment Account#: " + InvestmentAccountNumber +"\nInvestments: $"+String.format("%,.2f", totalInvestments)+"\n";
+		return super.toString() +"\n\nInvestment Account#: " + InvestmentAccountNumber +"\nInvestments: $"+String.format("%,.2f", totalInvestments)+"\n";// Added super.tostring method error 3#
     }
 }
